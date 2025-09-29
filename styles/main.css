@@ -1,0 +1,50 @@
+/* Custom styles complementing Tailwind — mobile-first */
+:root{
+  --accent-1: #7c3aed; /* indigo/purple */
+  --accent-2: #fb7185; /* rose */
+  --muted: #6b7280;
+}
+/* Simple utility classes that feel app-like */
+.input{
+  @apply w-full rounded-lg border border-slate-200 px-3 py-2 text-sm bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200;
+}
+.btn-primary{
+  @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-rose-500 text-white px-4 py-2 text-sm font-medium shadow-md hover:translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-300;
+}
+.btn-ghost{
+  @apply inline-flex items-center justify-center rounded-lg bg-white/60 px-3 py-2 text-sm text-slate-700 border border-slate-100 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-100;
+}
+kbd.kbd{
+  @apply bg-slate-100 border border-slate-200 rounded px-1 py-0.5 text-xs;
+}
+.chip{
+  @apply text-sm bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full border border-indigo-100 hover:bg-indigo-100 focus:outline-none;
+}
+/* Accessible hidden label */
+.sr-only{
+  @apply sr-only;
+}
+/* Entry card */
+.entry-card{
+  @apply bg-white rounded-xl p-4 border border-slate-50 shadow-sm;
+}
+.entry-mood{
+  width: 36px; height: 36px; border-radius: 10px; display:inline-flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:600;
+}
+/* Tag pill */
+.tag-pill{
+  @apply text-xs px-2 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-50;
+}
+/* Empty state */
+#emptyState button{ @apply inline-flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-700 px-4 py-2; }
+
+/* Focus and motion */
+:focus{ outline: 3px solid rgba(99,102,241,0.12); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; animation: none !important; }
+}
+
+/* Small screens tweaks */
+@media (max-width: 640px){
+  .entry-card{ padding: 12px; }
+}
